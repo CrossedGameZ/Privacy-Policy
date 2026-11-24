@@ -5,71 +5,188 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy</title>
   <style>
-	html{
-		background-color: rgba(230, 230, 230, 1);
-		color: #020024;
-	}
-  
+    :root {
+      --page-background: #e6e6e6;
+      --card-background: #f5f5f5;
+      --navy: #020024;
+      --green: #00a16b;
+      --text-muted: #34344f;
+      --border: rgba(2, 0, 36, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background:
+        radial-gradient(circle at 88% 92%, rgba(2, 0, 36, 0.1), transparent 28rem),
+        var(--page-background);
+      color: var(--navy);
+    }
+
     body {
-      font-family: Arial, sans-serif;
-	  font-size: 12px;
-      line-height: 1.6;
-      margin: 2%;
-      padding: 20px;
+      min-height: 100vh;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: clamp(24px, 5vw, 64px) clamp(16px, 4vw, 40px);
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
     }
 
     .container {
-      background-color: rgba(245, 245, 245, 1);
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-      padding: 20px;
-      margin-bottom: 20px;
+      position: relative;
+      background: rgba(230, 230, 230, 0.72);
+      border: 1px solid rgba(2, 0, 36, 0.1);
+      border-radius: 24px;
+      box-shadow:
+        0 24px 60px rgba(2, 0, 36, 0.12),
+        0 4px 14px rgba(2, 0, 36, 0.05);
+      padding: clamp(24px, 5vw, 52px);
+      backdrop-filter: blur(10px);
     }
 
     h1 {
-      font-size: 28px;
-      margin-bottom: 20px;
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 24px;
+      padding: 10px 8px 14px;
+      overflow: visible;
+      font-size: clamp(32px, 5vw, 46px);
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      text-align: center;
+      background: linear-gradient(135deg, var(--navy), var(--green));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     h2 {
-		font-size: 18px;
-		margin-bottom: 10px;
-		display: inline-block;
-		background: -webkit-linear-gradient(45deg, #020024, #00a16b 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 16px;
+      font-size: clamp(20px, 3vw, 24px);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      background: linear-gradient(45deg, #020024, #00a16b 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     p {
-      margin-bottom: 15px;
+      margin: 0 0 18px;
+      color: var(--text-muted);
     }
-	
-	img{
-		width: 26px;
-		height: 30px;
-		display: inline-block;
-		filter: brightness(0) saturate(100%) invert(4%) sepia(63%) saturate(2820%) hue-rotate(238deg) brightness(105%) contrast(114%);
-		vertical-align: middle;
-	}
-	
-	
-	.Bold{
-		font-weight: Bold;
-	}
-	
-	.Seperator{
-		width: 60%;
-		height: 1px;
-		margin-left: 20%;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	}
+
+    section {
+      margin: 0;
+      padding: clamp(22px, 4vw, 30px) 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    section + section {
+      border-top: 1px solid rgba(2, 0, 36, 0.08);
+      box-shadow: none;
+    }
+
+    img {
+      flex: 0 0 30px;
+      width: 30px;
+      height: 34px;
+      object-fit: contain;
+      filter: brightness(0) saturate(100%) invert(4%) sepia(63%) saturate(2820%) hue-rotate(238deg) brightness(105%) contrast(114%);
+      -webkit-text-fill-color: initial;
+    }
+
+    ul {
+      margin: 12px 0 18px;
+      padding: 14px 18px 14px 40px;
+      border: 1px solid rgba(2, 0, 36, 0.06);
+      border-left: 3px solid var(--green);
+      border-radius: 14px;
+      background: rgba(230, 230, 230, 0.46);
+      box-shadow:
+        inset 3px 3px 8px rgba(2, 0, 36, 0.08),
+        inset -3px -3px 8px rgba(255, 255, 255, 0.7);
+    }
+
+    li {
+      margin: 4px 0;
+      color: var(--text-muted);
+    }
+
+    a {
+      color: var(--green);
+      font-weight: 700;
+      text-decoration-thickness: 1.5px;
+      text-decoration-color: rgba(0, 161, 107, 0.45);
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--navy);
+      text-decoration-color: var(--navy);
+    }
+
+    .Bold {
+      display: inline-block;
+      margin: 0 0 16px;
+      padding: 8px 14px;
+      color: var(--navy);
+      font-weight: 700;
+      border: 1px solid rgba(0, 161, 107, 0.18);
+      border-radius: 999px;
+      background: rgba(0, 161, 107, 0.07);
+      box-shadow: 0 5px 14px rgba(2, 0, 36, 0.05);
+    }
+
+    .container > p:not(.Bold):not(.Seperator) {
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .Seperator {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 16px 12px;
+        font-size: 14px;
+      }
+
+      .container {
+        padding: 22px 16px;
+      }
+
+      section {
+        margin: 0;
+        border-radius: 0;
+        padding: 20px 0;
+      }
+
+      h2 {
+        align-items: flex-start;
+      }
+    }
 	
   </style>
 </head>
 <body>
   <div class="container">
     <center><h1>Privacy Policy</h1></center>
-	<p class = 'Bold'>Last updated: March 2, 2025</p>
+	<p class = 'Bold'>Last updated: November 24, 2026</p>
 	<p>
 		CrossedGameZ respects your privacy and is committed to protecting any personal information you provide while using our application.
 		This Privacy Policy outlines how we collect, use and safeguard your information when you use Fluency Cards.
@@ -81,9 +198,35 @@
 			<img src = 'data:image/png;base64,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'/>
 			Information Collection and Use
 		</h2>
+    <p>
+        We collect information provided by users through the game's
+        registration form (username, email and country) to create and manage their accounts and allow
+        them to access and restore their game progress when switching
+        to a different device.
+
+        We also collect and store gameplay-related information, such as
+        total XP, coins, decks, and other game statistics, for the
+        following purposes:
+        <ul>
+            <li>Saving and synchronizing game progress across devices.</li>
+            <li>Verifying gameplay data and detecting suspicious activity
+            or attempts to manipulate game progress.</li>
+            <li>Displaying selected gameplay statistics and rankings
+            on public leaderboards.</li>
+        </ul>
+    </p>
+
+    <p>
+        Gameplay information, such as usernames, scores, country, and
+        rankings, may be visible to other players through the game's
+        leaderboard.
+    </p>
+    <p>
+        Users can delete their accounts and all associated personal information and gameplay data stored in our database directly through the Account section of the game. Once an account deletion request is submitted, the associated data will be permanently deleted from our database.
+    </p>
+    <p class = 'Seperator'></p>
 		<p>
-			We do not collect any personal information from our users directly.<br>
-			However, our game uses a third-party service (IronSource), which may collect certain data to provide personalized ads and improve ad performance.<br>
+			In addition, our game uses a third-party service (IronSource), which may collect certain data to provide personalized ads and improve ad performance.<br>
 			The types of data collected may include:
 			<ul>
 				<li>Device information (e.g., OS version, device model)</li>
@@ -93,7 +236,6 @@
 			</ul>
 	    		For a full list of data collected by IronSource, please review their privacy policy <a href = 'https://developers.is.com/ironsource-mobile/air/ironsource-mobile-privacy-policy/#step-1' target = 'blank'>here</a>.
 		</p>
-		<p class = 'Seperator'></p>
     </section>
 
     <section>
@@ -102,8 +244,25 @@
 			Data Storage and Security
 		</h2>
 		<p>
-			The user preferences we collect (such as music settings and game speed) are stored locally on your device and are not transmitted over the internet.<br>
-			However, data collected by IronSource may be transmitted and processed by their servers. Please refer to IronSource's privacy policy to understand how they handle data security and user privacy.
+			Certain game preferences, such as music settings and game speed,
+      are stored locally on your device and are not transmitted over
+      the internet.
+      <br><br>
+      However, account information and gameplay data, including game
+      progress and statistics, are transmitted to and stored on our
+      servers to provide account management, progress synchronization
+      across devices, leaderboard functionality, and gameplay integrity
+      verification.
+      <br><br>
+      This information is processed and stored securely, and access to
+      it is limited to what is necessary to operate and maintain the
+      game's online features.
+      <br><br>
+      Our game also uses third-party services, including IronSource
+      for advertising. Information collected by these services may be
+      transmitted to and processed by their respective servers.
+      <br><br>
+      Please refer to IronSource's privacy policy to understand how they handle data security and user privacy.
 		</p>
 		<p class = 'Seperator'></p>
     </section>
